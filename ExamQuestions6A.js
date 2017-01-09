@@ -8,7 +8,7 @@
 
 // Store response headers.
 // Response kan være "gammelt" når det bliver sendt tilbage til clienten.
-//Half duplex - kan kun sende en vej ad gangen. (tænkt på en walkie talkie, kun 1 kan snakke ad gangen).
+// Half duplex - kan kun sende en vej ad gangen. (tænkt på en walkie talkie, kun 1 kan snakke ad gangen).
 
 
 
@@ -53,6 +53,7 @@
 
 
 // Question 4 - Explain what the WebSocket Protocol brings to the Web-world. ------------------------------------------
+    //Hvad er en socket:
     //Socket er en forbindelse. Dvs serveren har en port den lytter til, når der kommer en request som bliver accepteret
     //så laver serveren en forbindelse og kender addressen på klienten som den skal sende info tilbage til.
     // så laver den en ny socket til den samme port, så der kan komme nye forbindelser.
@@ -64,10 +65,11 @@
 
 
 /*
+Man behøver ikke et plugin for at have full-duplex. Dette kan man direkte i javascript/html med WebSocket.
+
 Det bringer en full-duplex, 2-vejs kommunikations kanal der opererer på en enkelt socket på web.
 - Den har små headers.
 
-eksempel på web-socket request:
 
 
 Når der er en connection, kan WebSocket data frames sendes frem og tilbage mellen klient og server i full-duplex
